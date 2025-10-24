@@ -17,7 +17,7 @@
       "particleEmitterType": {
         "type": "PointParticleEmitter"
       },
-      "textureName": "https://i.imgur.com/t5QE2Uw.png",
+      "textureName": "t1.png",
       "animations": [],
       "minAngularSpeed": 0.5,
       "maxAngularSpeed": 0.5,
@@ -68,7 +68,7 @@
         "radiusRange": 0.2,
         "heightRange": 0
       },
-      "textureName": "https://i.imgur.com/Jujc0wr.png",
+      "textureName": "t1.png",
       "animations": [],
       "minAngularSpeed": 0,
       "maxAngularSpeed": 0,
