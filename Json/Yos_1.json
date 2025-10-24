@@ -1,0 +1,344 @@
+{
+  "scene": {
+    "environment": {
+      "skybox": {
+        "texture": "textures/environment.dds",
+        "createDefault": true
+      }
+    },
+    "models": [
+      "https://s3.eu-north-1.amazonaws.com/resources.valannia.net/models/JacksHead.gltf",
+      "https://marazasbg9.github.io/Testyos/jackhead_v1.gltf",
+      "https://marazasbg9.github.io/Testyos/jackhead_trail_v1.gltf",
+      "https://marazasbg9.github.io/Testyos/jackhead_trail_v2.gltf"
+    ],
+    "camera": {
+      "createDefault": true,
+      "alpha": 1.5707963267948966,
+      "lowerRadiusLimit": 2.5,
+      "upperRadiusLimit": 10,
+      "pinchDeltaPercentage": 0.01,
+      "wheelDeltaPercentage": 0.01
+    }
+  },
+  "textures": {
+    "defaultNoise": "https://i.imgur.com/esEIIRk.png",
+    "defaultNoise2": "https://i.imgur.com/Mr4aujx.png",
+    "defaultTextMask": "https://i.imgur.com/g7fCBoF.png",
+    "defaultTextDist": "https://i.imgur.com/Z0WU7Ro.png"
+  },
+  "shaderMaterials": {
+    "baseConfig": {
+      "vertexSource": "precision highp float; attribute vec3 position; attribute vec2 uv; uniform mat4 worldViewProjection; varying vec2 vUV; void main(void) { vUV = uv; gl_Position = worldViewProjection * vec4(position, 1.0); }",
+      "fragmentSource": "precision highp float; uniform float time; uniform float lerp; uniform float PowNoise; uniform float PowMask; uniform float spTextNoiseU; uniform float spTextNoiseV; uniform vec2 offset; uniform sampler2D textureNoise; uniform sampler2D textureMask; uniform sampler2D textureDist; uniform vec2 TextNoiseScale; uniform vec2 TextDistScale; uniform vec3 Col; varying vec2 vUV; void main(void) { vec2 scaledUV = vUV * TextNoiseScale; vec2 displacedUV = scaledUV; displacedUV.x += time * spTextNoiseU; displacedUV.y += time * spTextNoiseV; displacedUV += offset; vec4 noiseColor = texture2D(textureNoise, displacedUV); vec4 maskColor = texture2D(textureMask, vUV); vec2 scaledUV3 = vUV * TextDistScale; vec4 distColor = texture2D(textureDist, scaledUV3); vec4 multipliedDist = distColor * lerp; vec2 finalUVNoise = displacedUV + multipliedDist.rg; noiseColor = texture2D(textureNoise, finalUVNoise); vec4 poweredNoise = vec4(pow(noiseColor.rgb, vec3(PowNoise)), noiseColor.a); vec4 poweredMask = vec4(pow(maskColor.rgb, vec3(PowMask)), maskColor.a); vec4 multipliedTextures = poweredNoise * poweredMask; vec3 finalColor = multipliedTextures.rgb * Col; gl_FragColor = vec4(finalColor, 1.0); }",
+      "attributes": ["position", "uv"],
+      "uniforms": ["worldViewProjection", "time", "lerp", "PowNoise", "PowMask", "spTextNoiseU", "spTextNoiseV", "offset", "textureNoise", "textureMask", "textureDist", "TextNoiseScale", "TextDistScale", "Col"],
+      "blending": {
+        "alphaMode": "ALPHA_ADD",
+        "disableDepthWrite": true,
+        "backFaceCulling": false,
+        "separateCullingPass": false,
+        "forceDepthWrite": false
+      }
+    },
+    "instances": {
+      "shaderInstance1": {
+        "name": "shader_blue",
+        "color": [0.36, 1.2, 2],
+        "noiseTextureURL": "https://i.imgur.com/esEIIRk.png",
+        "maskTextureURL": "https://i.imgur.com/g7fCBoF.png",
+        "distTextureURL": "https://i.imgur.com/Z0WU7Ro.png",
+        "TextNoiseScale": [3.0, 0.35],
+        "TextDistScale": [3.0, 0.35],
+        "lerpValue": 0.22,
+        "PowNoise": 4.0,
+        "PowMask": 1.0,
+        "spTextNoiseU": 0.0,
+        "spTextNoiseV": 0.1,
+        "offset": [0.0, 0.0]
+      },
+      "shaderInstance2": {
+        "name": "shader_green",
+        "color": [10.8, 36, 60],
+        "noiseTextureURL": "https://i.imgur.com/Mr4aujx.png",
+        "maskTextureURL": "https://i.imgur.com/H5EHjXE.png",
+        "distTextureURL": "https://i.imgur.com/Z0WU7Ro.png",
+        "TextNoiseScale": [0.5, 0.5],
+        "TextDistScale": [1.0, 1.0],
+        "lerpValue": 0.2,
+        "PowNoise": 2.5,
+        "PowMask": 1.0,
+        "spTextNoiseU": 0.0,
+        "spTextNoiseV": 0.1,
+        "offset": [0.3, 0.1]
+      },
+      "shaderInstance3": {
+        "name": "shader_green",
+        "color": [10.8, 36, 60],
+        "noiseTextureURL": "https://i.imgur.com/Mr4aujx.png",
+        "maskTextureURL": "https://i.imgur.com/H5EHjXE.png",
+        "distTextureURL": "https://i.imgur.com/Z0WU7Ro.png",
+        "TextNoiseScale": [0.5, 0.5],
+        "TextDistScale": [1.0, 1.0],
+        "lerpValue": 0.2,
+        "PowNoise": 3.0,
+        "PowMask": 1.0,
+        "spTextNoiseU": 0.0,
+        "spTextNoiseV": 0.1,
+        "offset": [0.0, 0.0]
+      },
+      "shaderInstance4": {
+        "name": "shader_green",
+        "color": [10.8, 36, 60],
+        "noiseTextureURL": "https://i.imgur.com/Mr4aujx.png",
+        "maskTextureURL": "https://i.imgur.com/H5EHjXE.png",
+        "distTextureURL": "https://i.imgur.com/Z0WU7Ro.png",
+        "TextNoiseScale": [0.5, 0.5],
+        "TextDistScale": [1.0, 1.0],
+        "lerpValue": 0.15,
+        "PowNoise": 2.0,
+        "PowMask": 2.0,
+        "spTextNoiseU": 0.0,
+        "spTextNoiseV": 0.1,
+        "offset": [0.6, 0.28]
+      },
+      "shaderInstance5": {
+        "name": "shader_green",
+        "color": [10.8, 36, 60],
+        "noiseTextureURL": "https://i.imgur.com/Mr4aujx.png",
+        "maskTextureURL": "https://i.imgur.com/H5EHjXE.png",
+        "distTextureURL": "https://i.imgur.com/Z0WU7Ro.png",
+        "TextNoiseScale": [0.5, 0.25],
+        "TextDistScale": [1.0, 0.5],
+        "lerpValue": 0.15,
+        "PowNoise": 2.5,
+        "PowMask": 2.5,
+        "spTextNoiseU": 0.0,
+        "spTextNoiseV": 0.05,
+        "offset": [0.6, 0.28]
+      }
+    }
+  },
+  "meshAssignments": {
+    "jhead_cil": "shaderInstance1",
+    "a2": "shaderInstance3",
+    "a1": "shaderInstance2",
+    "a3": "shaderInstance4",
+    "t1": "shaderInstance5",
+    "t2": "shaderInstance5",
+    "t3": "shaderInstance5",
+    "t4": "shaderInstance5"
+  },
+  "meshConfigurations": {
+    "default": {
+      "visibility": 1.0,
+      "isPickable": false,
+      "scaling": [1, 1, 1],
+      "position": [0.0, 0, 0.0],
+      "rotation": [0, 0, 0]
+    }
+  },
+  "billboards": {
+    "materials": {
+      "m_rock_s_1": {
+        "name": "m_rock_s_1",
+        "color": [10.8, 36, 60],
+        "noiseTextureURL": "https://i.imgur.com/Mr4aujx.png",
+        "maskTextureURL": "https://i.imgur.com/CbOpoNE.png",
+        "distTextureURL": "https://i.imgur.com/Z0WU7Ro.png",
+        "TextNoiseScale": [0.5, 0.5],
+        "TextDistScale": [1.0, 1.0],
+        "lerpValue": 0.15,
+        "PowNoise": 2.7,
+        "PowMask": 2.0,
+        "spTextNoiseU": 0.0,
+        "spTextNoiseV": -0.06,
+        "offset": [0.6, 0.28]
+      },
+      "m_rock_s_2": {
+        "name": "m_rock_s_1",
+        "color": [10.8, 36, 60],
+        "noiseTextureURL": "https://i.imgur.com/Mr4aujx.png",
+        "maskTextureURL": "https://i.imgur.com/CbOpoNE.png",
+        "distTextureURL": "https://i.imgur.com/Z0WU7Ro.png",
+        "TextNoiseScale": [0.35, 0.35],
+        "TextDistScale": [0.75, 0.75],
+        "lerpValue": 0.15,
+        "PowNoise": 2.7,
+        "PowMask": 2.0,
+        "spTextNoiseU": 0.0,
+        "spTextNoiseV": -0.06,
+        "offset": [0.8, 0.18]
+      },
+      "m_rock_s_3": {
+        "name": "m_rock_s_1",
+        "color": [10.8, 36, 60],
+        "noiseTextureURL": "https://i.imgur.com/Mr4aujx.png",
+        "maskTextureURL": "https://i.imgur.com/CbOpoNE.png",
+        "distTextureURL": "https://i.imgur.com/Z0WU7Ro.png",
+        "TextNoiseScale": [0.35, 0.35],
+        "TextDistScale": [0.75, 0.75],
+        "lerpValue": 0.15,
+        "PowNoise": 2.7,
+        "PowMask": 2.0,
+        "spTextNoiseU": 0.0,
+        "spTextNoiseV": -0.06,
+        "offset": [0.85, 0.48]
+      }
+    },
+    "instances": [
+      {
+        "name": "billboard1",
+        "position": [1.8, 0.73, 0],
+        "scale": [0.5, 0.5],
+        "rotation": [0, 0, 0],
+        "material": "m_rock_s_1",
+        "billboardMode": true
+      },
+      {
+        "name": "billboard2",
+        "position": [-1.72, 0.89, 0],
+        "scale": [0.35, 0.35],
+        "rotation": [0, 0, 0],
+        "material": "m_rock_s_1",
+        "billboardMode": true
+      },
+      {
+        "name": "billboard3",
+        "position": [-1.43, 1.4, 0],
+        "scale": [0.15, 0.2],
+        "rotation": [0, 0, 0],
+        "material": "m_rock_s_2",
+        "billboardMode": true
+      },
+      {
+        "name": "billboard4",
+        "position": [-1.26, 1.56, 0],
+        "scale": [0.08, 0.12],
+        "rotation": [0, 0, 0],
+        "material": "m_rock_s_1",
+        "billboardMode": true
+      },
+      {
+        "name": "billboard5",
+        "position": [-1.13, 1.98, 0],
+        "scale": [0.32, 0.29],
+        "rotation": [0, 0, 0],
+        "material": "m_rock_s_3",
+        "billboardMode": true
+      },
+      {
+        "name": "billboard6",
+        "position": [-0.78, 1.92, 0],
+        "scale": [0.32, 0.29],
+        "rotation": [0, 0, 0],
+        "material": "m_rock_s_1",
+        "billboardMode": true
+      },
+      {
+        "name": "billboard7",
+        "position": [-0.81, 2.26, 0],
+        "scale": [0.2, 0.16],
+        "rotation": [0, 0, 0],
+        "material": "m_rock_s_2",
+        "billboardMode": true
+      },
+      {
+        "name": "billboard8",
+        "position": [-0.64, 2.48, 0],
+        "scale": [0.2, 0.16],
+        "rotation": [0, 0, 0],
+        "material": "m_rock_s_3",
+        "billboardMode": true
+      },
+      {
+        "name": "billboard9",
+        "position": [0.66, 2.33, 0],
+        "scale": [0.18, 0.15],
+        "rotation": [0, 0, 0],
+        "material": "m_rock_s_2",
+        "billboardMode": true
+      },
+      {
+        "name": "billboard10",
+        "position": [0.84, 2.16, 0],
+        "scale": [0.18, 0.15],
+        "rotation": [0, 0, 0],
+        "material": "m_rock_s_1",
+        "billboardMode": true
+      },
+      {
+        "name": "billboard11",
+        "position": [1.25, 1.9, 0],
+        "scale": [0.4, 0.4],
+        "rotation": [0, 0, 0],
+        "material": "m_rock_s_3",
+        "billboardMode": true
+      },
+      {
+        "name": "billboard12",
+        "position": [1.4, 1.53, 0],
+        "scale": [0.27, 0.27],
+        "rotation": [0, 0, 0],
+        "material": "m_rock_s_2",
+        "billboardMode": true
+      },
+      {
+        "name": "billboard13",
+        "position": [1.08, 1.48, 0],
+        "scale": [0.25, 0.25],
+        "rotation": [0, 0, 0],
+        "material": "m_rock_s_1",
+        "billboardMode": true
+      }
+    ]
+  },
+  "particleSystems": [
+    {
+      "name": "particles1",
+      "position": [0, 0.65, 0.75],
+      "size": 1.5,
+      "texture": "https://i.imgur.com/CbOpoNE.png",
+      "color1": [0.36, 0.91, 1],
+      "color2": [0.36, 0.91, 1],
+      "minEmitPower": 0,
+      "maxEmitPower": 0,
+      "minLifeTime": "Number.MAX_SAFE_INTEGER",
+      "maxLifeTime": "Number.MAX_SAFE_INTEGER",
+      "minAngularSpeed": 0.25,
+      "maxAngularSpeed": 0.25
+    },
+    {
+      "name": "particles2",
+      "position": [0.17, 1.6, 0.8],
+      "size": 0.52,
+      "texture": "https://i.imgur.com/CbOpoNE.png",
+      "color1": [0.36, 0.91, 1],
+      "color2": [0.36, 0.91, 1],
+      "minEmitPower": 0,
+      "maxEmitPower": 0,
+      "minLifeTime": "Number.MAX_SAFE_INTEGER",
+      "maxLifeTime": "Number.MAX_SAFE_INTEGER",
+      "minAngularSpeed": 0.25,
+      "maxAngularSpeed": 0.25
+    },
+    {
+      "name": "particles3",
+      "position": [-0.17, 1.6, 0.8],
+      "size": 0.52,
+      "texture": "https://i.imgur.com/CbOpoNE.png",
+      "color1": [0.36, 0.91, 1],
+      "color2": [0.36, 0.91, 1],
+      "minEmitPower": 0,
+      "maxEmitPower": 0,
+      "minLifeTime": "Number.MAX_SAFE_INTEGER",
+      "maxLifeTime": "Number.MAX_SAFE_INTEGER",
+      "minAngularSpeed": 0.25,
+      "maxAngularSpeed": 0.25
+    }
+  ],
+  "animation": {
+    "timeIncrement": 0.02,
+    "animatedShaders": ["shaderInstance1", "shaderInstance2", "shaderInstance3"]
+  }
+}
