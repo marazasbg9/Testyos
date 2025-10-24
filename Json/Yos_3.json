@@ -1,0 +1,79 @@
+{
+  "particleSystems": [
+    {
+      "name": "particles",
+      "capacity": 2000,
+      "particleTexture": "https://i.imgur.com/t5QE2Uw.png",
+      "emitter": {
+        "x": 0,
+        "y": 0.05,
+        "z": 0
+      },
+      "isBillboardBased": false,
+      "minSize": 4.0,
+      "maxSize": 4.0,
+      "minEmitPower": 0,
+      "maxEmitPower": 0,
+      "minLifeTime": "Number.MAX_SAFE_INTEGER",
+      "maxLifeTime": "Number.MAX_SAFE_INTEGER",
+      "manualEmitCount": 2,
+      "emitterType": "point",
+      "direction1": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "direction2": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "minAngularSpeed": 0.5,
+      "maxAngularSpeed": 0.5,
+      "started": true
+    },
+    {
+      "name": "particles",
+      "capacity": 2000,
+      "particleTexture": "https://i.imgur.com/Jujc0wr.png",
+      "emitRate": 50.0,
+      "emitter": {
+        "x": 0,
+        "y": 0.1,
+        "z": 0
+      },
+      "emitterType": "cone",
+      "coneEmitter": {
+        "radius": 1.65,
+        "angle": 3.141592653589793,
+        "radiusRange": 0.2,
+        "heightRange": 0
+      },
+      "minEmitPower": 0,
+      "maxEmitPower": 0,
+      "sizeGradients": [
+        {
+          "gradient": 0,
+          "factor1": 0.0,
+          "factor2": 0.0
+        },
+        {
+          "gradient": 0.5,
+          "factor1": 0.075,
+          "factor2": 0.15
+        },
+        {
+          "gradient": 1.0,
+          "factor1": 0,
+          "factor2": 0
+        }
+      ],
+      "gravity": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "started": true
+    }
+  ]
+}
