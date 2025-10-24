@@ -24,7 +24,7 @@
         "radiusRange": 0,
         "directionRandomizer": 0
       },
-      "textureName": "sun/T_SunSurface.png",
+      "textureName": "https://i.imgur.com/Jujc0wr.png",
       "animations": [],
       "minAngularSpeed": -0.4,
       "maxAngularSpeed": 0.4,
@@ -134,7 +134,7 @@
         "radiusRange": 0,
         "directionRandomizer": 0
       },
-      "textureName": "sun/T_SunFlare.png",
+      "textureName": "https://i.imgur.com/Jujc0wr.png",
       "animations": [],
       "minAngularSpeed": 0,
       "maxAngularSpeed": 0,
@@ -245,7 +245,7 @@
         "radiusRange": 0,
         "directionRandomizer": 0
       },
-      "textureName": "sun/T_Star.png",
+      "textureName": "https://i.imgur.com/Jujc0wr.png",
       "animations": [],
       "minAngularSpeed": 0,
       "maxAngularSpeed": 0,
