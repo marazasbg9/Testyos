@@ -17,7 +17,7 @@
       "particleEmitterType": {
         "type": "PointParticleEmitter"
       },
-      "textureName": "t1.png",
+      "textureName": "sun/T_SunSurface.png",
       "animations": [],
       "minAngularSpeed": 0.5,
       "maxAngularSpeed": 0.5,
@@ -68,7 +68,7 @@
         "radiusRange": 0.2,
         "heightRange": 0
       },
-      "textureName": "t1.png",
+      "textureName": "sun/T_SunSurface.png",
       "animations": [],
       "minAngularSpeed": 0,
       "maxAngularSpeed": 0,
