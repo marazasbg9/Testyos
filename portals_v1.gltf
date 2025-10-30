@@ -23,19 +23,6 @@
             "name" : "portals_2"
         }
     ],
-    "materials" : [
-        {
-            "doubleSided" : true,
-            "name" : "Material",
-            "pbrMetallicRoughness" : {
-                "baseColorTexture" : {
-                    "index" : 0
-                },
-                "metallicFactor" : 0,
-                "roughnessFactor" : 0.5
-            }
-        }
-    ],
     "meshes" : [
         {
             "name" : "Circle",
@@ -46,8 +33,7 @@
                         "NORMAL" : 1,
                         "TEXCOORD_0" : 2
                     },
-                    "indices" : 3,
-                    "material" : 0
+                    "indices" : 3
                 }
             ]
         },
@@ -60,23 +46,9 @@
                         "NORMAL" : 5,
                         "TEXCOORD_0" : 6
                     },
-                    "indices" : 7,
-                    "material" : 0
+                    "indices" : 7
                 }
             ]
-        }
-    ],
-    "textures" : [
-        {
-            "sampler" : 0,
-            "source" : 0
-        }
-    ],
-    "images" : [
-        {
-            "mimeType" : "image/png",
-            "name" : "Untitled",
-            "uri" : "Untitled.png"
         }
     ],
     "accessors" : [
@@ -197,12 +169,6 @@
             "byteLength" : 1536,
             "byteOffset" : 70496,
             "target" : 34963
-        }
-    ],
-    "samplers" : [
-        {
-            "magFilter" : 9729,
-            "minFilter" : 9987
         }
     ],
     "buffers" : [
