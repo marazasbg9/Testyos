@@ -20,7 +20,7 @@
     ],
     "meshes" : [
         {
-            "name" : "Plane.011",
+            "name" : "Plane.001",
             "primitives" : [
                 {
                     "attributes" : {
@@ -37,11 +37,11 @@
         {
             "bufferView" : 0,
             "componentType" : 5126,
-            "count" : 1031,
+            "count" : 807,
             "max" : [
                 2.1090705394744873,
                 0,
-                2.954275369644165
+                2.9340837001800537
             ],
             "min" : [
                 -2.1090705394744873,
@@ -53,13 +53,13 @@
         {
             "bufferView" : 1,
             "componentType" : 5126,
-            "count" : 1031,
+            "count" : 807,
             "type" : "VEC3"
         },
         {
             "bufferView" : 2,
             "componentType" : 5126,
-            "count" : 1031,
+            "count" : 807,
             "type" : "VEC2"
         },
         {
@@ -72,32 +72,32 @@
     "bufferViews" : [
         {
             "buffer" : 0,
-            "byteLength" : 12372,
+            "byteLength" : 9684,
             "byteOffset" : 0,
             "target" : 34962
         },
         {
             "buffer" : 0,
-            "byteLength" : 12372,
-            "byteOffset" : 12372,
+            "byteLength" : 9684,
+            "byteOffset" : 9684,
             "target" : 34962
         },
         {
             "buffer" : 0,
-            "byteLength" : 8248,
-            "byteOffset" : 24744,
+            "byteLength" : 6456,
+            "byteOffset" : 19368,
             "target" : 34962
         },
         {
             "buffer" : 0,
             "byteLength" : 5808,
-            "byteOffset" : 32992,
+            "byteOffset" : 25824,
             "target" : 34963
         }
     ],
     "buffers" : [
         {
-            "byteLength" : 38800,
+            "byteLength" : 31632,
             "uri" : "spring_v6-2.bin"
         }
     ]
