@@ -143,13 +143,7 @@
             "source" : 0
         }
     ],
-    "images" : [
-        {
-            "mimeType" : "image/png",
-            "name" : "3dpea.com_T_ObsidianSpire_BaseColorOpacity",
-            "uri" : "3dpea_com_T_ObsidianSpire_BaseColorOpacity.png"
-        }
-    ],
+    
     "accessors" : [
         {
             "bufferView" : 0,
