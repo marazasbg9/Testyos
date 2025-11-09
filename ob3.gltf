@@ -12,8 +12,7 @@
                 1,
                 2,
                 3,
-                4,
-                5
+                4
             ]
         }
     ],
@@ -37,23 +36,6 @@
         {
             "mesh" : 4,
             "name" : "o5"
-        },
-        {
-            "mesh" : 5,
-            "name" : "Obsidian Spire.001"
-        }
-    ],
-    "materials" : [
-        {
-            "doubleSided" : true,
-            "name" : "Material.001",
-            "pbrMetallicRoughness" : {
-                "baseColorTexture" : {
-                    "index" : 0
-                },
-                "metallicFactor" : 0,
-                "roughnessFactor" : 0.5
-            }
         }
     ],
     "meshes" : [
@@ -121,29 +103,8 @@
                     "indices" : 19
                 }
             ]
-        },
-        {
-            "name" : "Mesh Obsidian Spire.006",
-            "primitives" : [
-                {
-                    "attributes" : {
-                        "POSITION" : 20,
-                        "NORMAL" : 21,
-                        "TEXCOORD_0" : 22
-                    },
-                    "indices" : 23,
-                    "material" : 0
-                }
-            ]
         }
     ],
-    "textures" : [
-        {
-            "sampler" : 0,
-            "source" : 0
-        }
-    ],
-    
     "accessors" : [
         {
             "bufferView" : 0,
@@ -314,40 +275,6 @@
             "componentType" : 5123,
             "count" : 48,
             "type" : "SCALAR"
-        },
-        {
-            "bufferView" : 20,
-            "componentType" : 5126,
-            "count" : 10,
-            "max" : [
-                0.3864954113960266,
-                0.6827858686447144,
-                -0.6378628015518188
-            ],
-            "min" : [
-                0.3514401614665985,
-                0.30536866188049316,
-                -0.7252000570297241
-            ],
-            "type" : "VEC3"
-        },
-        {
-            "bufferView" : 21,
-            "componentType" : 5126,
-            "count" : 10,
-            "type" : "VEC3"
-        },
-        {
-            "bufferView" : 22,
-            "componentType" : 5126,
-            "count" : 10,
-            "type" : "VEC2"
-        },
-        {
-            "bufferView" : 23,
-            "componentType" : 5123,
-            "count" : 24,
-            "type" : "SCALAR"
         }
     ],
     "bufferViews" : [
@@ -470,41 +397,11 @@
             "byteLength" : 96,
             "byteOffset" : 2352,
             "target" : 34963
-        },
-        {
-            "buffer" : 0,
-            "byteLength" : 120,
-            "byteOffset" : 2448,
-            "target" : 34962
-        },
-        {
-            "buffer" : 0,
-            "byteLength" : 120,
-            "byteOffset" : 2568,
-            "target" : 34962
-        },
-        {
-            "buffer" : 0,
-            "byteLength" : 80,
-            "byteOffset" : 2688,
-            "target" : 34962
-        },
-        {
-            "buffer" : 0,
-            "byteLength" : 48,
-            "byteOffset" : 2768,
-            "target" : 34963
-        }
-    ],
-    "samplers" : [
-        {
-            "magFilter" : 9729,
-            "minFilter" : 9987
         }
     ],
     "buffers" : [
         {
-            "byteLength" : 2816,
+            "byteLength" : 2448,
             "uri" : "ob3.bin"
         }
     ]
