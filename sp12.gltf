@@ -1,0 +1,190 @@
+{
+    "asset" : {
+        "generator" : "Khronos glTF Blender I/O v3.3.32",
+        "version" : "2.0"
+    },
+    "scene" : 0,
+    "scenes" : [
+        {
+            "name" : "Scene",
+            "nodes" : [
+                0,
+                1
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "mesh" : 0,
+            "name" : "cp2",
+            "translation" : [
+                -0.0762087032198906,
+                1.9586150646209717,
+                0.3186584711074829
+            ]
+        },
+        {
+            "mesh" : 1,
+            "name" : "sp11",
+            "translation" : [
+                -0.0762087032198906,
+                1.9586150646209717,
+                -0.1180451363325119
+            ]
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "Circle.001",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 0,
+                        "NORMAL" : 1,
+                        "TEXCOORD_0" : 2
+                    },
+                    "indices" : 3
+                }
+            ]
+        },
+        {
+            "name" : "Sphere",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 4,
+                        "NORMAL" : 5,
+                        "TEXCOORD_0" : 6
+                    },
+                    "indices" : 7
+                }
+            ]
+        }
+    ],
+    "accessors" : [
+        {
+            "bufferView" : 0,
+            "componentType" : 5126,
+            "count" : 1506,
+            "max" : [
+                0.6415309906005859,
+                0.6415311098098755,
+                8.619537084086915e-08
+            ],
+            "min" : [
+                -0.6415309906005859,
+                -0.6415311098098755,
+                -8.619537084086915e-08
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 1,
+            "componentType" : 5126,
+            "count" : 1506,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 2,
+            "componentType" : 5126,
+            "count" : 1506,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 3,
+            "componentType" : 5123,
+            "count" : 1536,
+            "type" : "SCALAR"
+        },
+        {
+            "bufferView" : 4,
+            "componentType" : 5126,
+            "count" : 561,
+            "max" : [
+                0.2067837417125702,
+                0.20678377151489258,
+                0.20678368210792542
+            ],
+            "min" : [
+                -0.20678365230560303,
+                -0.20678377151489258,
+                -0.20678384602069855
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 5,
+            "componentType" : 5126,
+            "count" : 561,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 6,
+            "componentType" : 5126,
+            "count" : 561,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 7,
+            "componentType" : 5123,
+            "count" : 3072,
+            "type" : "SCALAR"
+        }
+    ],
+    "bufferViews" : [
+        {
+            "buffer" : 0,
+            "byteLength" : 18072,
+            "byteOffset" : 0,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 18072,
+            "byteOffset" : 18072,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 12048,
+            "byteOffset" : 36144,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 3072,
+            "byteOffset" : 48192,
+            "target" : 34963
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 6732,
+            "byteOffset" : 51264,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 6732,
+            "byteOffset" : 57996,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 4488,
+            "byteOffset" : 64728,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 6144,
+            "byteOffset" : 69216,
+            "target" : 34963
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 75360,
+            "uri" : "sp12.bin"
+        }
+    ]
+}
