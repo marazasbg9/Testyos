@@ -15,21 +15,20 @@
     "nodes" : [
         {
             "mesh" : 0,
-            "name" : "sword"
+            "name" : "s_1"
         }
     ],
     "meshes" : [
         {
-            "name" : "Mesh Warhall Syndicate.001",
+            "name" : "Plane",
             "primitives" : [
                 {
                     "attributes" : {
                         "POSITION" : 0,
                         "NORMAL" : 1,
-                        "TEXCOORD_0" : 2,
-                        "TEXCOORD_1" : 3
+                        "TEXCOORD_0" : 2
                     },
-                    "indices" : 4
+                    "indices" : 3
                 }
             ]
         }
@@ -38,79 +37,67 @@
         {
             "bufferView" : 0,
             "componentType" : 5126,
-            "count" : 944,
+            "count" : 63,
             "max" : [
-                0.3710663318634033,
-                4.687060832977295,
-                0.8436722159385681
+                0.5099382400512695,
+                4.802408695220947,
+                0.9024454355239868
             ],
             "min" : [
-                -0.3712397813796997,
-                1.9922473430633545,
-                0.4720917344093323
+                -0.5099382400512695,
+                1.8822087049484253,
+                0.5936112403869629
             ],
             "type" : "VEC3"
         },
         {
             "bufferView" : 1,
             "componentType" : 5126,
-            "count" : 944,
+            "count" : 63,
             "type" : "VEC3"
         },
         {
             "bufferView" : 2,
             "componentType" : 5126,
-            "count" : 944,
+            "count" : 63,
             "type" : "VEC2"
         },
         {
             "bufferView" : 3,
-            "componentType" : 5126,
-            "count" : 944,
-            "type" : "VEC2"
-        },
-        {
-            "bufferView" : 4,
             "componentType" : 5123,
-            "count" : 1572,
+            "count" : 288,
             "type" : "SCALAR"
         }
     ],
     "bufferViews" : [
         {
             "buffer" : 0,
-            "byteLength" : 11328,
+            "byteLength" : 756,
             "byteOffset" : 0,
             "target" : 34962
         },
         {
             "buffer" : 0,
-            "byteLength" : 11328,
-            "byteOffset" : 11328,
+            "byteLength" : 756,
+            "byteOffset" : 756,
             "target" : 34962
         },
         {
             "buffer" : 0,
-            "byteLength" : 7552,
-            "byteOffset" : 22656,
+            "byteLength" : 504,
+            "byteOffset" : 1512,
             "target" : 34962
         },
         {
             "buffer" : 0,
-            "byteLength" : 7552,
-            "byteOffset" : 30208,
-            "target" : 34962
-        },
-        {
-            "buffer" : 0,
-            "byteLength" : 3144,
-            "byteOffset" : 37760,
+            "byteLength" : 576,
+            "byteOffset" : 2016,
             "target" : 34963
         }
     ],
     "buffers" : [
         {
-            "byteLength" : 40904,
+            "byteLength" : 2592,
             "uri" : "sword_1.bin"
         }
     ]
