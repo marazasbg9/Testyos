@@ -4,10 +4,10 @@
 		"version":"2.0"
 	},
 	"extensionsUsed":[
-		"EXT_texture_webp"
+		
 	],
 	"extensionsRequired":[
-		"EXT_texture_webp"
+		
 	],
 	"scene":0,
 	"scenes":[
@@ -100373,53 +100373,67 @@
 			]
 		}
 	],
-	"materials":[
-		{
-			"doubleSided":true,
-			"name":"MAT_Nook_Merchant_Cart",
-			"normalTexture":{
-				"index":0
-			},
-			"pbrMetallicRoughness":{
-				"baseColorTexture":{
-					"index":1
-				},
-				"metallicRoughnessTexture":{
-					"index":2
-				}
-			}
-		},
-		{
-			"doubleSided":true,
-			"name":"MAT_Nook_Merchant",
-			"normalTexture":{
-				"index":3
-			},
-			"pbrMetallicRoughness":{
-				"baseColorTexture":{
-					"index":4
-				},
-				"metallicRoughnessTexture":{
-					"index":5
-				}
-			}
-		},
-		{
-			"doubleSided":true,
-			"name":"MAT_Nook_Merchant_Staff",
-			"normalTexture":{
-				"index":6
-			},
-			"pbrMetallicRoughness":{
-				"baseColorTexture":{
-					"index":7
-				},
-				"metallicRoughnessTexture":{
-					"index":8
-				}
-			}
-		}
-	],
+	"materials": 
+[
+    {
+        "name": "T_Nook_Merchant",
+        "pbrMetallicRoughness": {
+            "baseColorFactor": [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+            ],
+            "metallicFactor": 1.0,
+            "roughnessFactor": 1.0
+        },
+        "emissiveFactor": [
+            0.0,
+            0.0,
+            0.0
+        ],
+        "doubleSided": true
+    },
+    {
+        "name": "T_Nook_Merchant_Staff",
+        "pbrMetallicRoughness": {
+            "baseColorFactor": [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+            ],
+            "metallicFactor": 1.0,
+            "roughnessFactor": 1.0
+        },
+        "emissiveFactor": [
+            0.0,
+            0.0,
+            0.0
+        ],
+        "doubleSided": true
+    },
+    {
+        "name": "T_Nook_Merchant_Cart",
+        "pbrMetallicRoughness": {
+            "baseColorFactor": [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+            ],
+            "metallicFactor": 1.0,
+            "roughnessFactor": 1.0
+        },
+        "emissiveFactor": [
+            0.0,
+            0.0,
+            0.0
+        ],
+        "doubleSided": true
+    }
+],
+
 	"meshes":[
 		{
 			"name":"Mesh.009",
@@ -100475,125 +100489,10 @@
 		}
 	],
 	"textures":[
-		{
-			"extensions":{
-				"EXT_texture_webp":{
-					"source":0
-				}
-			},
-			"sampler":0
-		},
-		{
-			"extensions":{
-				"EXT_texture_webp":{
-					"source":1
-				}
-			},
-			"sampler":0
-		},
-		{
-			"extensions":{
-				"EXT_texture_webp":{
-					"source":2
-				}
-			},
-			"sampler":0
-		},
-		{
-			"extensions":{
-				"EXT_texture_webp":{
-					"source":3
-				}
-			},
-			"sampler":0
-		},
-		{
-			"extensions":{
-				"EXT_texture_webp":{
-					"source":4
-				}
-			},
-			"sampler":0
-		},
-		{
-			"extensions":{
-				"EXT_texture_webp":{
-					"source":5
-				}
-			},
-			"sampler":0
-		},
-		{
-			"extensions":{
-				"EXT_texture_webp":{
-					"source":6
-				}
-			},
-			"sampler":0
-		},
-		{
-			"extensions":{
-				"EXT_texture_webp":{
-					"source":7
-				}
-			},
-			"sampler":0
-		},
-		{
-			"extensions":{
-				"EXT_texture_webp":{
-					"source":8
-				}
-			},
-			"sampler":0
-		}
+
 	],
 	"images":[
-		{
-			"mimeType":"image/webp",
-			"name":"T_Nook_Merchant_Cart_Normal",
-			"uri":"Textures/T_Nook_Merchant_Cart_Normal.webp"
-		},
-		{
-			"mimeType":"image/webp",
-			"name":"T_Nook_Merchant_Cart_Base_color",
-			"uri":"Textures/T_Nook_Merchant_Cart_Base_color.webp"
-		},
-		{
-			"mimeType":"image/webp",
-			"name":"T_Nook_Merchant_Cart_Metallic-T_Nook_Merchant_Cart_Roughnes",
-			"uri":"Textures/T_Nook_Merchant_Cart_Metallic-T_Nook_Merchant_Cart_Roughnes.webp"
-		},
-		{
-			"mimeType":"image/webp",
-			"name":"T_Nook_Merchant_Normal",
-			"uri":"Textures/T_Nook_Merchant_Normal.webp"
-		},
-		{
-			"mimeType":"image/webp",
-			"name":"T_Nook_Merchant_Base_color",
-			"uri":"Textures/T_Nook_Merchant_Base_color.webp"
-		},
-		{
-			"mimeType":"image/webp",
-			"name":"T_Nook_Merchant_Metallic-T_Nook_Merchant_Roughness",
-			"uri":"Textures/T_Nook_Merchant_Metallic-T_Nook_Merchant_Roughness.webp"
-		},
-		{
-			"mimeType":"image/webp",
-			"name":"T_Nook_Merchant_Staff_Normal",
-			"uri":"Textures/T_Nook_Merchant_Staff_Normal.webp"
-		},
-		{
-			"mimeType":"image/webp",
-			"name":"T_Nook_Merchant_Staff_Base_color",
-			"uri":"Textures/T_Nook_Merchant_Staff_Base_color.webp"
-		},
-		{
-			"mimeType":"image/webp",
-			"name":"T_Nook_Merchant_Staff_Metallic-T_Nook_Merchant_Staff_Roughnes",
-			"uri":"Textures/T_Nook_Merchant_Staff_Metallic-T_Nook_Merchant_Staff_Roughnes.webp"
-		}
+
 	],
 	"skins":[
 		{
